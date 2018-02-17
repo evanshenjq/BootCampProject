@@ -1,0 +1,4 @@
+FROM nginx
+ADD src/TrainingSystemWeb_new/training_systemweb_new/dist /etc/nginx/html/
+COPY src/nginxqa.conf /etc/nginx/nginx.conf
+EXPOSE 80

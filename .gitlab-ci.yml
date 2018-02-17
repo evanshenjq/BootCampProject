@@ -1,0 +1,48 @@
+image : maven:3-jdk-8
+stages : 
+   - deploydev
+   - deployqa
+   - sonar
+   - test
+deploy_dev:
+    stage : deploydev
+    script : 
+        - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN gdcgit.perficient.com:4567
+        - sh deploydev.sh
+        
+        
+deploy_qa:
+    stage : deployqa
+    script : 
+       - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN gdcgit.perficient.com:4567
+       - sh qa.sh
+    tags :
+       - qa
+        
+
+        
+        
+sonar:
+    stage : sonar
+    script :
+       - cd /home/gitlab-runner/builds/99c6cc1b/0/bootcamp23/mycourse/src
+       - cd TrainingSystem
+       - mvn compile
+       - cd ..
+       - sonar-scanner
+    tags :
+       - sonar-runner
+       
+selenuim:
+    stage : test
+    script :
+        - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN gdcgit.perficient.com:4567
+        - docker build -t $CI_REGISTRY_IMAGE:training-system-test -f src/dockerfile_test .
+        - docker push $CI_REGISTRY_IMAGE:training-system-test
+        - docker stop training-system-test
+        - docker rm training-system-test
+        - docker pull gdcgit.perficient.com:4567/bootcamp23/mycourse:training-system-test
+        - docker run -d --name training-system-test gdcgit.perficient.com:4567/bootcamp23/mycourse:training-system-test
+        
+    tags:
+        - sonar-runner

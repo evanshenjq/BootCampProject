@@ -1,0 +1,4 @@
+FROM maven:3-jdk-8
+ADD src/TrainingSystem /training-system
+WORKDIR /training-system
+EXPOSE 8090

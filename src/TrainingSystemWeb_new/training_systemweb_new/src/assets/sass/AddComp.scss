@@ -1,0 +1,51 @@
+/* chrome */
+    
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+}
+
+
+/* Firefox */
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.breadcrumb {
+    text-align: center;
+}
+
+#logoPreview {
+    margin: 10px;
+    width: 100px;
+}
+
+#pictures {
+    width: 80%;
+}
+
+#option {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    clear: both;
+}
+
+#compNameInput p {
+    color: #f00;
+}
+
+.picturesImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 130px;
+    margin: 10px;
+    float: left;
+}
+
+.hideDiv {
+    display: none;
+    margin: 5px;
+}

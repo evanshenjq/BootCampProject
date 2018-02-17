@@ -1,0 +1,160 @@
+2017-12-12 10:51:08.727 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper -
+				Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.perficient.TrainingSystem.controller.CompanyEditControllerTest], using SpringBootContextLoader
+2017-12-12 10:51:08.737 [main] INFO  o.s.test.context.support.AbstractContextLoader -
+				Could not detect default resource locations for test class [com.perficient.TrainingSystem.controller.CompanyEditControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-12-12 10:51:08.738 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils -
+				Could not detect default configuration classes for test class [com.perficient.TrainingSystem.controller.CompanyEditControllerTest]: CompanyEditControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-12-12 10:51:08.917 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper -
+				Found @SpringBootConfiguration com.perficient.TrainingSystem.Application for test class com.perficient.TrainingSystem.controller.CompanyEditControllerTest
+2017-12-12 10:51:08.928 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper -
+				Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-12-12 10:51:08.955 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper -
+				Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@77847718, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7f3b84b8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@57a3af25, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b662a77, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f0eb4b4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5c33f1a9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1623b78d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@c8c12ac, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6adbc9d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4550bb58, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4ec4f3a0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@223191a6]
+2017-12-12 10:51:09.448 [main] INFO  c.p.T.controller.CompanyEditControllerTest -
+				Starting CompanyEditControllerTest on bootcamp06 with PID 10329 (started by perficient in /home/perficient/Documents/mycourse/src/TrainingSystem)
+2017-12-12 10:51:09.449 [main] INFO  c.p.T.controller.CompanyEditControllerTest -
+				No active profile set, falling back to default profiles: default
+2017-12-12 10:51:09.834 [main] INFO  o.s.w.context.support.GenericWebApplicationContext -
+				Refreshing org.springframework.web.context.support.GenericWebApplicationContext@48075da3: startup date [Tue Dec 12 10:51:09 CST 2017]; root of context hierarchy
+2017-12-12 10:51:10.008 [background-preinit] INFO  org.hibernate.validator.internal.util.Version -
+				HV000001: Hibernate Validator 5.3.5.Final
+2017-12-12 10:51:12.196 [main] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-12-12 10:51:12.378 [cluster-ClusterId{value='5a2f442002a8c728599b0aa5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:1, serverValue:88519}] to 10.2.1.123:3030
+2017-12-12 10:51:12.385 [cluster-ClusterId{value='5a2f442002a8c728599b0aa5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2341275}
+2017-12-12 10:51:13.030 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext -
+				Initializing Spring FrameworkServlet ''
+2017-12-12 10:51:13.030 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet -
+				FrameworkServlet '': initialization started
+2017-12-12 10:51:13.217 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/addcomp],methods=[POST]}" onto public com.perficient.TrainingSystem.model.Result com.perficient.TrainingSystem.controller.CompanyController.addCompany(org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-12-12 10:51:13.219 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/delComp],methods=[POST]}" onto public com.perficient.TrainingSystem.model.Result com.perficient.TrainingSystem.controller.CompanyController.delCompany(java.lang.String)
+2017-12-12 10:51:13.220 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/editComp],methods=[POST]}" onto public com.perficient.TrainingSystem.model.Result com.perficient.TrainingSystem.controller.CompanyEditController.updateCompany(org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-12-12 10:51:13.221 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/editCompany/oldName/{oldName}]}" onto public com.perficient.TrainingSystem.model.Company com.perficient.TrainingSystem.controller.CompanyEditController.getByOldName(java.lang.String)
+2017-12-12 10:51:13.222 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/backStage/key/{page}]}" onto public com.perficient.TrainingSystem.model.CompanyListResult<com.perficient.TrainingSystem.model.Company> com.perficient.TrainingSystem.controller.CompanyListController.searchCompaniesByKey(int,java.lang.String) throws java.lang.Exception
+2017-12-12 10:51:13.222 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/backStage/{page}]}" onto public com.perficient.TrainingSystem.model.CompanyListResult<com.perficient.TrainingSystem.model.Company> com.perficient.TrainingSystem.controller.CompanyListController.showListCompany(int) throws java.lang.Exception
+2017-12-12 10:51:13.231 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-12 10:51:13.232 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-12 10:51:13.288 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/wahaha/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 10:51:13.289 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 10:51:13.289 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 10:51:13.316 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 10:51:13.704 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -
+				Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@48075da3: startup date [Tue Dec 12 10:51:09 CST 2017]; root of context hierarchy
+2017-12-12 10:51:13.792 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -
+				Detected @ExceptionHandler methods in globleExceptionHandler
+2017-12-12 10:51:13.891 [main] WARN  o.s.b.a.t.AbstractTemplateResolverConfiguration -
+				Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-12-12 10:51:14.487 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet -
+				FrameworkServlet '': initialization completed in 1456 ms
+2017-12-12 10:51:14.744 [main] INFO  c.p.T.controller.CompanyEditControllerTest -
+				Started CompanyEditControllerTest in 5.661 seconds (JVM running for 6.922)
+2017-12-12 10:51:14.856 [Thread-3] INFO  o.s.w.context.support.GenericWebApplicationContext -
+				Closing org.springframework.web.context.support.GenericWebApplicationContext@48075da3: startup date [Tue Dec 12 10:51:09 CST 2017]; root of context hierarchy
+2017-12-12 10:52:08.460 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper -
+				Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.perficient.TrainingSystem.controller.CompanyEditControllerTest], using SpringBootContextLoader
+2017-12-12 10:52:08.467 [main] INFO  o.s.test.context.support.AbstractContextLoader -
+				Could not detect default resource locations for test class [com.perficient.TrainingSystem.controller.CompanyEditControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-12-12 10:52:08.469 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils -
+				Could not detect default configuration classes for test class [com.perficient.TrainingSystem.controller.CompanyEditControllerTest]: CompanyEditControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-12-12 10:52:08.646 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper -
+				Found @SpringBootConfiguration com.perficient.TrainingSystem.Application for test class com.perficient.TrainingSystem.controller.CompanyEditControllerTest
+2017-12-12 10:52:08.655 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper -
+				Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-12-12 10:52:08.680 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper -
+				Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@79e2c065, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a93b025, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@35cabb2a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7e07db1f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1189dd52, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@36bc55de, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@564fabc8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@16d04d3d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@49ec71f8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1d2adfbe, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@36902638, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@223d2c72]
+2017-12-12 10:52:09.196 [main] INFO  c.p.T.controller.CompanyEditControllerTest -
+				Starting CompanyEditControllerTest on bootcamp06 with PID 10390 (started by perficient in /home/perficient/Documents/mycourse/src/TrainingSystem)
+2017-12-12 10:52:09.199 [main] INFO  c.p.T.controller.CompanyEditControllerTest -
+				No active profile set, falling back to default profiles: default
+2017-12-12 10:52:09.596 [main] INFO  o.s.w.context.support.GenericWebApplicationContext -
+				Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4a83a74a: startup date [Tue Dec 12 10:52:09 CST 2017]; root of context hierarchy
+2017-12-12 10:52:09.881 [background-preinit] INFO  org.hibernate.validator.internal.util.Version -
+				HV000001: Hibernate Validator 5.3.5.Final
+2017-12-12 10:52:11.779 [main] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-12-12 10:52:11.944 [cluster-ClusterId{value='5a2f445b02a8c7289632bdea', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:1, serverValue:88720}] to 10.2.1.123:3030
+2017-12-12 10:52:11.953 [cluster-ClusterId{value='5a2f445b02a8c7289632bdea', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=5880610}
+2017-12-12 10:52:12.773 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext -
+				Initializing Spring FrameworkServlet ''
+2017-12-12 10:52:12.773 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet -
+				FrameworkServlet '': initialization started
+2017-12-12 10:52:12.995 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/addcomp],methods=[POST]}" onto public com.perficient.TrainingSystem.model.Result com.perficient.TrainingSystem.controller.CompanyController.addCompany(org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-12-12 10:52:12.997 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/delComp],methods=[POST]}" onto public com.perficient.TrainingSystem.model.Result com.perficient.TrainingSystem.controller.CompanyController.delCompany(java.lang.String)
+2017-12-12 10:52:12.998 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/editComp],methods=[POST]}" onto public com.perficient.TrainingSystem.model.Result com.perficient.TrainingSystem.controller.CompanyEditController.updateCompany(org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-12-12 10:52:12.999 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/editCompany/oldName/{oldName}]}" onto public com.perficient.TrainingSystem.model.Company com.perficient.TrainingSystem.controller.CompanyEditController.getByOldName(java.lang.String)
+2017-12-12 10:52:13.000 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/backStage/{page}]}" onto public com.perficient.TrainingSystem.model.CompanyListResult<com.perficient.TrainingSystem.model.Company> com.perficient.TrainingSystem.controller.CompanyListController.showListCompany(int) throws java.lang.Exception
+2017-12-12 10:52:13.001 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/backStage/key/{page}]}" onto public com.perficient.TrainingSystem.model.CompanyListResult<com.perficient.TrainingSystem.model.Company> com.perficient.TrainingSystem.controller.CompanyListController.searchCompaniesByKey(int,java.lang.String) throws java.lang.Exception
+2017-12-12 10:52:13.009 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-12 10:52:13.010 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-12 10:52:13.072 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/wahaha/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 10:52:13.073 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 10:52:13.073 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 10:52:13.103 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 10:52:13.513 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -
+				Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4a83a74a: startup date [Tue Dec 12 10:52:09 CST 2017]; root of context hierarchy
+2017-12-12 10:52:13.625 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -
+				Detected @ExceptionHandler methods in globleExceptionHandler
+2017-12-12 10:52:13.732 [main] WARN  o.s.b.a.t.AbstractTemplateResolverConfiguration -
+				Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-12-12 10:52:14.430 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet -
+				FrameworkServlet '': initialization completed in 1656 ms
+2017-12-12 10:52:14.821 [main] INFO  c.p.T.controller.CompanyEditControllerTest -
+				Started CompanyEditControllerTest in 6.02 seconds (JVM running for 7.127)
+2017-12-12 10:52:14.986 [main] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:2, serverValue:88762}] to 10.2.1.123:3030
+2017-12-12 10:52:15.032 [main] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-12 10:52:15.046 [main] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-12 10:52:15.049 [cluster-ClusterId{value='5a2f445f02a8c7289632bdeb', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:3, serverValue:88763}] to 10.2.1.123:3030
+2017-12-12 10:52:15.055 [cluster-ClusterId{value='5a2f445f02a8c7289632bdeb', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=4930850}
+2017-12-12 10:52:15.076 [main] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:4, serverValue:88764}] to 10.2.1.123:3030
+2017-12-12 10:52:15.120 [main] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:4, serverValue:88764}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-12 10:52:15.125 [main] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-12 10:52:15.132 [main] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-12 10:52:15.139 [cluster-ClusterId{value='5a2f445f02a8c7289632bdee', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:5, serverValue:88765}] to 10.2.1.123:3030
+2017-12-12 10:52:15.141 [cluster-ClusterId{value='5a2f445f02a8c7289632bdee', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1368376}
+2017-12-12 10:52:15.149 [main] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:6, serverValue:88766}] to 10.2.1.123:3030
+2017-12-12 10:52:15.162 [main] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:6, serverValue:88766}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-12 10:52:15.257 [Thread-3] INFO  o.s.w.context.support.GenericWebApplicationContext -
+				Closing org.springframework.web.context.support.GenericWebApplicationContext@4a83a74a: startup date [Tue Dec 12 10:52:09 CST 2017]; root of context hierarchy
+2017-12-12 10:52:15.268 [Thread-3] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:2, serverValue:88762}] to 10.2.1.123:3030 because the pool has been closed.

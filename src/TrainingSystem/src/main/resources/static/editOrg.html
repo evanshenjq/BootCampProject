@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Organization</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/editOrg.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="/js/jqury.session.js"></script>
+    <script src="js/editOrg.js"></script>
+  
+
+</head>
+
+<body>
+
+    <div class="breadcrumb">
+        <h4>Edit Organization</h4>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <form class="form-horizontal col-md-9 col-md-offset-3" id="myForm" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label>Logo</label>
+                    <p class="help-block">Support only pictures.</p>
+                    <div id="logo">
+                        <input type="file" @change="getLogo" accept="image/*" name="logo" />
+                        <img :src="logoUrl" id="logoPreview" v-if="logoPreview">
+                        <img :src="oldLogoUrl" id="oldLogoPreview" v-if="oldLogoPreview">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <br/>
+                    <div class="row col-md-8" id="orgNameInput">
+                        <input type="text" class="form-control" v-model="orgName" name="name">
+                        <p v-if="showOrgNameError">Name is required</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Type
+                    </label>
+                    <br/>
+                    <div class="row col-md-8 btn-group">
+                        <select class="btn btn-default dropdown-toggle" required="" name="type">
+                            <option value="comprehensive">Comprehensive
+                            </option>
+                            <option value="IT">IT
+                            </option>
+                            <option value="art">Art
+                            </option>
+                            <option value="tutorship">Tutorship
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Telephone</label>
+                    <br/>
+                    <div class="row col-md-8">
+                        <input type="number" onkeypress="return(/[\d]/.test(String.fromCharCode(event.keyCode)))" class="form-control" v-model="phoneNum"
+                            name="phone">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Address</label>
+                    <br/>
+                    <div class="row col-md-8 row">
+                        <input type="text" class="form-control" name="address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Introduction</label>
+                    <br/>
+                    <div class="row col-md-8">
+                        <textarea class="form-control" rows="3" name="introduce"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Pictures</label>
+                    <p class="help-block">Support only pictures.</p>
+                    <div id="pictures">
+                        <input type="file" multiple="true" @change="getFile" accept="image/*" name="introphoto" />
+                        <div v-for="preUrl in preUrls">
+                            <img :src="preUrl" name="picturePerview">
+                        </div>
+                        <div v-for="oldPreUrl in oldPreUrls" v-if="oldPrePreview">
+                            <img :src="oldPreUrl" name="oldPicturePerview">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="option">
+                    <input type="button" class="btn btn-primary" value="Save" id="saveButton" @click="save" />
+                    <input type="button" class="btn btn-warning" value="Close" id="closeButton" @click="close" />
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" v-if="showHeader">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="modalCross"
+                        >
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            {{labelText}}
+                        </h4>
+                    </div>
+                    <div class="modal-body" v-if="showBody" id="modalBody">
+                        {{bodyText}}
+                    </div>
+                    <div class="modal-footer" v-if="showFooter">
+                        <button type="button" class="btn btn-primary" v-if="showConfirm" @click="confirm" name="modalYes">
+                            {{confirmText}}
+                        </button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" v-if="showCancle" name="modalNo">
+                            {{cancleText}}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+.introPic {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  margin-bottom: 20px;
+  background-size: cover;
+}
+
+.logo {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  margin-bottom: 20px;
+  background-size: cover;
+}
+
+.infoTitle {
+  margin: 0px 20px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 23px;
+  font-weight: 700;
+  color: #5ca94d;
+  border-bottom: 1px dashed #eaeaea;
+}
+
+.info {
+  padding: 3px 20px 13px 20px;
+  line-height: 23px;
+  font-size: 14px;
+  color: #333;
+  word-break: break-all;
+}
+
+.num {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.courseName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-top: 23px;
+}
+
+.summary {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height:20px;
+  color: #666;
+}
+
+.price {
+  color: #f63;
+  font-size: 23px;
+}
+
+.boxAfterTitle{
+  margin: 20px;
+}
+
+.smlLabel {
+  color: #999;
+}
+
+.infoAfterLogo {
+  line-height:35px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.orgName {
+  margin: 20px 0px 0px 20px;
+}
+
+.introPic {
+  width: 100%;
+}
+
+.oneCourse{
+  border:1px solid #fff;
+  cursor: pointer;
+  margin: 20px 0px;
+}
+
+.oneCourse:hover{
+  border:1px solid #f63;
+}

@@ -1,0 +1,994 @@
+2017-12-13 14:20:41.336 [main] INFO  com.perficient.TrainingSystem.Application -
+				Starting Application on bootcamp02 with PID 28307 (/home/perficient/mycourse/src/TrainingSystem/target/classes started by perficient in /home/perficient/mycourse/src/TrainingSystem)
+2017-12-13 14:20:41.341 [main] INFO  com.perficient.TrainingSystem.Application -
+				No active profile set, falling back to default profiles: default
+2017-12-13 14:20:41.945 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -
+				Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c33b74f: startup date [Wed Dec 13 14:20:41 CST 2017]; root of context hierarchy
+2017-12-13 14:20:42.118 [background-preinit] INFO  org.hibernate.validator.internal.util.Version -
+				HV000001: Hibernate Validator 5.3.5.Final
+2017-12-13 14:20:44.361 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer -
+				Tomcat initialized with port(s): 8090 (http)
+2017-12-13 14:20:44.373 [main] INFO  org.apache.catalina.core.StandardService -
+				Starting service [Tomcat]
+2017-12-13 14:20:44.375 [main] INFO  org.apache.catalina.core.StandardEngine -
+				Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-13 14:20:44.527 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2017-12-13 14:20:44.527 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader -
+				Root WebApplicationContext: initialization completed in 2582 ms
+2017-12-13 14:20:44.714 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean -
+				Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-13 14:20:44.724 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-13 14:20:44.725 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-13 14:20:44.726 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-13 14:20:44.726 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-13 14:20:45.188 [main] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-12-13 14:20:45.287 [cluster-ClusterId{value='5a30c6bd1c554e6e93411b98', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:1, serverValue:120622}] to 10.2.1.123:3030
+2017-12-13 14:20:45.298 [cluster-ClusterId{value='5a30c6bd1c554e6e93411b98', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2639342}
+2017-12-13 14:20:46.076 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -
+				Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c33b74f: startup date [Wed Dec 13 14:20:41 CST 2017]; root of context hierarchy
+2017-12-13 14:20:46.170 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/addcomp],methods=[POST]}" onto public com.perficient.TrainingSystem.model.Result com.perficient.TrainingSystem.controller.CompanyController.addCompany(org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-12-13 14:20:46.172 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/delComp],methods=[POST]}" onto public com.perficient.TrainingSystem.model.Result com.perficient.TrainingSystem.controller.CompanyController.delCompany(java.lang.String)
+2017-12-13 14:20:46.173 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/editCompany/oldName/{oldName}]}" onto public com.perficient.TrainingSystem.model.Company com.perficient.TrainingSystem.controller.CompanyEditController.getByOldName(java.lang.String)
+2017-12-13 14:20:46.174 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/editComp],methods=[POST]}" onto public com.perficient.TrainingSystem.model.Result<com.perficient.TrainingSystem.model.Company> com.perficient.TrainingSystem.controller.CompanyEditController.updateCompany(org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-12-13 14:20:46.175 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/backStage/{page}]}" onto public com.perficient.TrainingSystem.model.CompanyListResult<com.perficient.TrainingSystem.model.Company> com.perficient.TrainingSystem.controller.CompanyListController.showListCompany(int) throws java.lang.Exception
+2017-12-13 14:20:46.190 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/backStage/key/{page}]}" onto public com.perficient.TrainingSystem.model.CompanyListResult<com.perficient.TrainingSystem.model.Company> com.perficient.TrainingSystem.controller.CompanyListController.searchCompaniesByKey(int,java.lang.String) throws java.lang.Exception
+2017-12-13 14:20:46.201 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-13 14:20:46.202 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-13 14:20:46.250 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/wahaha/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-13 14:20:46.250 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-13 14:20:46.250 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-13 14:20:46.273 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -
+				Detected @ExceptionHandler methods in globleExceptionHandler
+2017-12-13 14:20:46.320 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-13 14:20:46.364 [main] WARN  o.s.b.a.t.AbstractTemplateResolverConfiguration -
+				Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-12-13 14:20:47.061 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter -
+				Registering beans for JMX exposure on startup
+2017-12-13 14:20:47.089 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8090"]
+2017-12-13 14:20:47.107 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8090"]
+2017-12-13 14:20:47.117 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+				Using a shared selector for servlet write/read
+2017-12-13 14:20:47.158 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer -
+				Tomcat started on port(s): 8090 (http)
+2017-12-13 14:20:47.168 [main] INFO  com.perficient.TrainingSystem.Application -
+				Started Application in 6.261 seconds (JVM running for 6.975)
+2017-12-13 14:21:13.424 [http-nio-8090-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] -
+				Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-13 14:21:13.425 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+				FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-13 14:21:13.443 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+				FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2017-12-13 14:21:19.779 [http-nio-8090-exec-10] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:19.790 [cluster-ClusterId{value='5a30c6df1c554e6e93411b99', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:2, serverValue:120641}] to 10.2.1.123:3030
+2017-12-13 14:21:19.791 [cluster-ClusterId{value='5a30c6df1c554e6e93411b99', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1332419}
+2017-12-13 14:21:19.810 [http-nio-8090-exec-10] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:3, serverValue:120642}] to 10.2.1.123:3030
+2017-12-13 14:21:19.844 [http-nio-8090-exec-10] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:3, serverValue:120642}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:19.847 [http-nio-8090-exec-10] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:19.850 [http-nio-8090-exec-10] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:19.861 [cluster-ClusterId{value='5a30c6df1c554e6e93411b9b', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:4, serverValue:120643}] to 10.2.1.123:3030
+2017-12-13 14:21:19.863 [cluster-ClusterId{value='5a30c6df1c554e6e93411b9b', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1268104}
+2017-12-13 14:21:19.870 [http-nio-8090-exec-10] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:5, serverValue:120644}] to 10.2.1.123:3030
+2017-12-13 14:21:19.877 [http-nio-8090-exec-10] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:5, serverValue:120644}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:19.920 [http-nio-8090-exec-10] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:6, serverValue:120645}] to 10.2.1.123:3030
+2017-12-13 14:21:23.334 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.339 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.344 [cluster-ClusterId{value='5a30c6e31c554e6e93411b9e', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:7, serverValue:120646}] to 10.2.1.123:3030
+2017-12-13 14:21:23.345 [cluster-ClusterId{value='5a30c6e31c554e6e93411b9e', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1169721}
+2017-12-13 14:21:23.355 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:8, serverValue:120647}] to 10.2.1.123:3030
+2017-12-13 14:21:23.362 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:8, serverValue:120647}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.363 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.366 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.372 [cluster-ClusterId{value='5a30c6e31c554e6e93411b9f', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:9, serverValue:120648}] to 10.2.1.123:3030
+2017-12-13 14:21:23.374 [cluster-ClusterId{value='5a30c6e31c554e6e93411b9f', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1259123}
+2017-12-13 14:21:23.382 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:10, serverValue:120649}] to 10.2.1.123:3030
+2017-12-13 14:21:23.390 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:10, serverValue:120649}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.391 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.393 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.399 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:11, serverValue:120650}] to 10.2.1.123:3030
+2017-12-13 14:21:23.401 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1198756}
+2017-12-13 14:21:23.408 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:12, serverValue:120651}] to 10.2.1.123:3030
+2017-12-13 14:21:23.447 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:12, serverValue:120651}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.448 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.451 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.462 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:13, serverValue:120652}] to 10.2.1.123:3030
+2017-12-13 14:21:23.464 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1850174}
+2017-12-13 14:21:23.472 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:14, serverValue:120653}] to 10.2.1.123:3030
+2017-12-13 14:21:23.479 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:14, serverValue:120653}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.484 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.487 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.498 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba2', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:15, serverValue:120654}] to 10.2.1.123:3030
+2017-12-13 14:21:23.500 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba2', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1195888}
+2017-12-13 14:21:23.507 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:16, serverValue:120655}] to 10.2.1.123:3030
+2017-12-13 14:21:23.543 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:16, serverValue:120655}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.544 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.556 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.568 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba3', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:17, serverValue:120656}] to 10.2.1.123:3030
+2017-12-13 14:21:23.571 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba3', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2021068}
+2017-12-13 14:21:23.582 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:18, serverValue:120657}] to 10.2.1.123:3030
+2017-12-13 14:21:23.591 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:18, serverValue:120657}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.593 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.598 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.616 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:19, serverValue:120658}] to 10.2.1.123:3030
+2017-12-13 14:21:23.619 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2646057}
+2017-12-13 14:21:23.627 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:20, serverValue:120659}] to 10.2.1.123:3030
+2017-12-13 14:21:23.666 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:20, serverValue:120659}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.667 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.674 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.687 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:21, serverValue:120660}] to 10.2.1.123:3030
+2017-12-13 14:21:23.689 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1159072}
+2017-12-13 14:21:23.699 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:22, serverValue:120661}] to 10.2.1.123:3030
+2017-12-13 14:21:23.706 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:22, serverValue:120661}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.707 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.711 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.723 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:23, serverValue:120662}] to 10.2.1.123:3030
+2017-12-13 14:21:23.725 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1092807}
+2017-12-13 14:21:23.739 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:24, serverValue:120663}] to 10.2.1.123:3030
+2017-12-13 14:21:23.806 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:24, serverValue:120663}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.807 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.809 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.822 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:25, serverValue:120664}] to 10.2.1.123:3030
+2017-12-13 14:21:23.825 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1936664}
+2017-12-13 14:21:23.836 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:26, serverValue:120665}] to 10.2.1.123:3030
+2017-12-13 14:21:23.841 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:26, serverValue:120665}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.842 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.851 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.860 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba8', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:27, serverValue:120666}] to 10.2.1.123:3030
+2017-12-13 14:21:23.864 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba8', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=3400390}
+2017-12-13 14:21:23.871 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:28, serverValue:120667}] to 10.2.1.123:3030
+2017-12-13 14:21:23.906 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:28, serverValue:120667}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.910 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.912 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.919 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba9', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:29, serverValue:120668}] to 10.2.1.123:3030
+2017-12-13 14:21:23.921 [cluster-ClusterId{value='5a30c6e31c554e6e93411ba9', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1154152}
+2017-12-13 14:21:23.930 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:30, serverValue:120669}] to 10.2.1.123:3030
+2017-12-13 14:21:23.935 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:30, serverValue:120669}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:23.936 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:23.948 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:23.956 [cluster-ClusterId{value='5a30c6e31c554e6e93411baa', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:31, serverValue:120670}] to 10.2.1.123:3030
+2017-12-13 14:21:23.958 [cluster-ClusterId{value='5a30c6e31c554e6e93411baa', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1353877}
+2017-12-13 14:21:23.968 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:32, serverValue:120671}] to 10.2.1.123:3030
+2017-12-13 14:21:24.008 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:32, serverValue:120671}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:24.009 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:24.013 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:24.022 [cluster-ClusterId{value='5a30c6e41c554e6e93411bab', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:33, serverValue:120672}] to 10.2.1.123:3030
+2017-12-13 14:21:24.024 [cluster-ClusterId{value='5a30c6e41c554e6e93411bab', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1427672}
+2017-12-13 14:21:24.030 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:34, serverValue:120673}] to 10.2.1.123:3030
+2017-12-13 14:21:24.034 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:34, serverValue:120673}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:24.035 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:24.037 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:24.042 [cluster-ClusterId{value='5a30c6e41c554e6e93411bac', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:35, serverValue:120674}] to 10.2.1.123:3030
+2017-12-13 14:21:24.044 [cluster-ClusterId{value='5a30c6e41c554e6e93411bac', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1071950}
+2017-12-13 14:21:24.052 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:36, serverValue:120675}] to 10.2.1.123:3030
+2017-12-13 14:21:24.084 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:36, serverValue:120675}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:24.086 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:24.088 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:24.096 [cluster-ClusterId{value='5a30c6e41c554e6e93411bad', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:37, serverValue:120676}] to 10.2.1.123:3030
+2017-12-13 14:21:24.098 [cluster-ClusterId{value='5a30c6e41c554e6e93411bad', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1203359}
+2017-12-13 14:21:24.105 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:38, serverValue:120677}] to 10.2.1.123:3030
+2017-12-13 14:21:24.111 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:38, serverValue:120677}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:24.116 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:24.120 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:24.124 [cluster-ClusterId{value='5a30c6e41c554e6e93411bae', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:39, serverValue:120678}] to 10.2.1.123:3030
+2017-12-13 14:21:24.126 [cluster-ClusterId{value='5a30c6e41c554e6e93411bae', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1408844}
+2017-12-13 14:21:24.138 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:40, serverValue:120679}] to 10.2.1.123:3030
+2017-12-13 14:21:24.171 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:40, serverValue:120679}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:24.173 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:24.175 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:24.186 [cluster-ClusterId{value='5a30c6e41c554e6e93411baf', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:41, serverValue:120680}] to 10.2.1.123:3030
+2017-12-13 14:21:24.188 [cluster-ClusterId{value='5a30c6e41c554e6e93411baf', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1424800}
+2017-12-13 14:21:24.193 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:42, serverValue:120681}] to 10.2.1.123:3030
+2017-12-13 14:21:24.199 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:42, serverValue:120681}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:24.200 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:24.202 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:24.207 [cluster-ClusterId{value='5a30c6e41c554e6e93411bb0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:43, serverValue:120682}] to 10.2.1.123:3030
+2017-12-13 14:21:24.210 [cluster-ClusterId{value='5a30c6e41c554e6e93411bb0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1672044}
+2017-12-13 14:21:24.216 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:44, serverValue:120683}] to 10.2.1.123:3030
+2017-12-13 14:21:24.249 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:44, serverValue:120683}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:24.250 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:24.251 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:24.255 [cluster-ClusterId{value='5a30c6e41c554e6e93411bb1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:45, serverValue:120684}] to 10.2.1.123:3030
+2017-12-13 14:21:24.257 [cluster-ClusterId{value='5a30c6e41c554e6e93411bb1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1074531}
+2017-12-13 14:21:24.262 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:46, serverValue:120685}] to 10.2.1.123:3030
+2017-12-13 14:21:24.267 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:46, serverValue:120685}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:32.591 [http-nio-8090-exec-6] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:32.593 [http-nio-8090-exec-6] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:32.600 [cluster-ClusterId{value='5a30c6ec1c554e6e93411bb2', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:47, serverValue:120686}] to 10.2.1.123:3030
+2017-12-13 14:21:32.601 [cluster-ClusterId{value='5a30c6ec1c554e6e93411bb2', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=893817}
+2017-12-13 14:21:32.606 [http-nio-8090-exec-6] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:48, serverValue:120687}] to 10.2.1.123:3030
+2017-12-13 14:21:32.611 [http-nio-8090-exec-6] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:48, serverValue:120687}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:32.612 [http-nio-8090-exec-6] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:32.613 [http-nio-8090-exec-6] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:32.619 [cluster-ClusterId{value='5a30c6ec1c554e6e93411bb4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:49, serverValue:120688}] to 10.2.1.123:3030
+2017-12-13 14:21:32.623 [cluster-ClusterId{value='5a30c6ec1c554e6e93411bb4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=3150630}
+2017-12-13 14:21:32.629 [http-nio-8090-exec-6] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:50, serverValue:120689}] to 10.2.1.123:3030
+2017-12-13 14:21:32.634 [http-nio-8090-exec-6] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:50, serverValue:120689}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:37.222 [http-nio-8090-exec-5] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:37.224 [http-nio-8090-exec-5] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:37.233 [cluster-ClusterId{value='5a30c6f11c554e6e93411bb6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:51, serverValue:120690}] to 10.2.1.123:3030
+2017-12-13 14:21:37.236 [cluster-ClusterId{value='5a30c6f11c554e6e93411bb6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2024726}
+2017-12-13 14:21:37.243 [http-nio-8090-exec-5] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:52, serverValue:120691}] to 10.2.1.123:3030
+2017-12-13 14:21:37.249 [http-nio-8090-exec-5] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:52, serverValue:120691}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:37.250 [http-nio-8090-exec-5] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:37.251 [http-nio-8090-exec-5] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:37.256 [cluster-ClusterId{value='5a30c6f11c554e6e93411bb8', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:53, serverValue:120692}] to 10.2.1.123:3030
+2017-12-13 14:21:37.257 [cluster-ClusterId{value='5a30c6f11c554e6e93411bb8', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1185013}
+2017-12-13 14:21:37.265 [http-nio-8090-exec-5] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:54, serverValue:120693}] to 10.2.1.123:3030
+2017-12-13 14:21:37.272 [http-nio-8090-exec-5] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:54, serverValue:120693}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:40.536 [http-nio-8090-exec-8] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:40.537 [http-nio-8090-exec-8] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:40.551 [cluster-ClusterId{value='5a30c6f41c554e6e93411bba', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:55, serverValue:120734}] to 10.2.1.123:3030
+2017-12-13 14:21:40.556 [cluster-ClusterId{value='5a30c6f41c554e6e93411bba', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=4740251}
+2017-12-13 14:21:40.567 [http-nio-8090-exec-8] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:56, serverValue:120735}] to 10.2.1.123:3030
+2017-12-13 14:21:40.575 [http-nio-8090-exec-8] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:56, serverValue:120735}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:21:40.576 [http-nio-8090-exec-8] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:21:40.579 [http-nio-8090-exec-8] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:21:40.587 [cluster-ClusterId{value='5a30c6f41c554e6e93411bbc', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:57, serverValue:120736}] to 10.2.1.123:3030
+2017-12-13 14:21:40.589 [cluster-ClusterId{value='5a30c6f41c554e6e93411bbc', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1156937}
+2017-12-13 14:21:40.599 [http-nio-8090-exec-8] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:58, serverValue:120737}] to 10.2.1.123:3030
+2017-12-13 14:21:40.606 [http-nio-8090-exec-8] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:58, serverValue:120737}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:26.204 [http-nio-8090-exec-2] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:26.207 [http-nio-8090-exec-2] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:26.213 [cluster-ClusterId{value='5a30c7221c554e6e93411bbe', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:59, serverValue:120830}] to 10.2.1.123:3030
+2017-12-13 14:22:26.215 [cluster-ClusterId{value='5a30c7221c554e6e93411bbe', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1295403}
+2017-12-13 14:22:26.221 [http-nio-8090-exec-2] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:60, serverValue:120831}] to 10.2.1.123:3030
+2017-12-13 14:22:26.225 [http-nio-8090-exec-2] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:60, serverValue:120831}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:26.226 [http-nio-8090-exec-2] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:26.227 [http-nio-8090-exec-2] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:26.232 [cluster-ClusterId{value='5a30c7221c554e6e93411bc0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:61, serverValue:120832}] to 10.2.1.123:3030
+2017-12-13 14:22:26.234 [cluster-ClusterId{value='5a30c7221c554e6e93411bc0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=926378}
+2017-12-13 14:22:26.245 [http-nio-8090-exec-2] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:62, serverValue:120833}] to 10.2.1.123:3030
+2017-12-13 14:22:26.250 [http-nio-8090-exec-2] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:62, serverValue:120833}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.419 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.423 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.431 [cluster-ClusterId{value='5a30c7251c554e6e93411bc3', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:63, serverValue:120836}] to 10.2.1.123:3030
+2017-12-13 14:22:29.432 [cluster-ClusterId{value='5a30c7251c554e6e93411bc3', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1116614}
+2017-12-13 14:22:29.442 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:64, serverValue:120837}] to 10.2.1.123:3030
+2017-12-13 14:22:29.447 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:64, serverValue:120837}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.448 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.449 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.454 [cluster-ClusterId{value='5a30c7251c554e6e93411bc4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:65, serverValue:120838}] to 10.2.1.123:3030
+2017-12-13 14:22:29.456 [cluster-ClusterId{value='5a30c7251c554e6e93411bc4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2365128}
+2017-12-13 14:22:29.463 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:66, serverValue:120839}] to 10.2.1.123:3030
+2017-12-13 14:22:29.467 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:66, serverValue:120839}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.468 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.469 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.478 [cluster-ClusterId{value='5a30c7251c554e6e93411bc5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:67, serverValue:120840}] to 10.2.1.123:3030
+2017-12-13 14:22:29.479 [cluster-ClusterId{value='5a30c7251c554e6e93411bc5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=913053}
+2017-12-13 14:22:29.487 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:68, serverValue:120841}] to 10.2.1.123:3030
+2017-12-13 14:22:29.516 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:68, serverValue:120841}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.516 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.518 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.524 [cluster-ClusterId{value='5a30c7251c554e6e93411bc6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:69, serverValue:120842}] to 10.2.1.123:3030
+2017-12-13 14:22:29.526 [cluster-ClusterId{value='5a30c7251c554e6e93411bc6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=927369}
+2017-12-13 14:22:29.532 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:70, serverValue:120843}] to 10.2.1.123:3030
+2017-12-13 14:22:29.537 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:70, serverValue:120843}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.538 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.539 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.546 [cluster-ClusterId{value='5a30c7251c554e6e93411bc7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:71, serverValue:120844}] to 10.2.1.123:3030
+2017-12-13 14:22:29.547 [cluster-ClusterId{value='5a30c7251c554e6e93411bc7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=916315}
+2017-12-13 14:22:29.554 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:72, serverValue:120845}] to 10.2.1.123:3030
+2017-12-13 14:22:29.559 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:72, serverValue:120845}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.559 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.561 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.566 [cluster-ClusterId{value='5a30c7251c554e6e93411bc8', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:73, serverValue:120846}] to 10.2.1.123:3030
+2017-12-13 14:22:29.568 [cluster-ClusterId{value='5a30c7251c554e6e93411bc8', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1143965}
+2017-12-13 14:22:29.575 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:74, serverValue:120847}] to 10.2.1.123:3030
+2017-12-13 14:22:29.582 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:74, serverValue:120847}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.586 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.588 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.599 [cluster-ClusterId{value='5a30c7251c554e6e93411bc9', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:75, serverValue:120848}] to 10.2.1.123:3030
+2017-12-13 14:22:29.602 [cluster-ClusterId{value='5a30c7251c554e6e93411bc9', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1914395}
+2017-12-13 14:22:29.608 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:76, serverValue:120849}] to 10.2.1.123:3030
+2017-12-13 14:22:29.613 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:76, serverValue:120849}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.614 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.624 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.630 [cluster-ClusterId{value='5a30c7251c554e6e93411bca', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:77, serverValue:120850}] to 10.2.1.123:3030
+2017-12-13 14:22:29.631 [cluster-ClusterId{value='5a30c7251c554e6e93411bca', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=877972}
+2017-12-13 14:22:29.637 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:78, serverValue:120851}] to 10.2.1.123:3030
+2017-12-13 14:22:29.641 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:78, serverValue:120851}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.642 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.646 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.651 [cluster-ClusterId{value='5a30c7251c554e6e93411bcb', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:79, serverValue:120852}] to 10.2.1.123:3030
+2017-12-13 14:22:29.652 [cluster-ClusterId{value='5a30c7251c554e6e93411bcb', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=947108}
+2017-12-13 14:22:29.657 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:80, serverValue:120853}] to 10.2.1.123:3030
+2017-12-13 14:22:29.661 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:80, serverValue:120853}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.662 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.663 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.671 [cluster-ClusterId{value='5a30c7251c554e6e93411bcc', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:81, serverValue:120854}] to 10.2.1.123:3030
+2017-12-13 14:22:29.673 [cluster-ClusterId{value='5a30c7251c554e6e93411bcc', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1380245}
+2017-12-13 14:22:29.680 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:82, serverValue:120855}] to 10.2.1.123:3030
+2017-12-13 14:22:29.685 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:82, serverValue:120855}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.686 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.688 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.701 [cluster-ClusterId{value='5a30c7251c554e6e93411bcd', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:83, serverValue:120856}] to 10.2.1.123:3030
+2017-12-13 14:22:29.702 [cluster-ClusterId{value='5a30c7251c554e6e93411bcd', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=961028}
+2017-12-13 14:22:29.708 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:84, serverValue:120857}] to 10.2.1.123:3030
+2017-12-13 14:22:29.713 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:84, serverValue:120857}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.713 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.715 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.721 [cluster-ClusterId{value='5a30c7251c554e6e93411bce', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:85, serverValue:120858}] to 10.2.1.123:3030
+2017-12-13 14:22:29.723 [cluster-ClusterId{value='5a30c7251c554e6e93411bce', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1079814}
+2017-12-13 14:22:29.728 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:86, serverValue:120859}] to 10.2.1.123:3030
+2017-12-13 14:22:29.733 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:86, serverValue:120859}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.733 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.737 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.739 [cluster-ClusterId{value='5a30c7251c554e6e93411bcf', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:87, serverValue:120860}] to 10.2.1.123:3030
+2017-12-13 14:22:29.741 [cluster-ClusterId{value='5a30c7251c554e6e93411bcf', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=872291}
+2017-12-13 14:22:29.746 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:88, serverValue:120861}] to 10.2.1.123:3030
+2017-12-13 14:22:29.751 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:88, serverValue:120861}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.752 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.755 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.761 [cluster-ClusterId{value='5a30c7251c554e6e93411bd0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:89, serverValue:120862}] to 10.2.1.123:3030
+2017-12-13 14:22:29.762 [cluster-ClusterId{value='5a30c7251c554e6e93411bd0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1189492}
+2017-12-13 14:22:29.768 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:90, serverValue:120863}] to 10.2.1.123:3030
+2017-12-13 14:22:29.773 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:90, serverValue:120863}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.774 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.775 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.779 [cluster-ClusterId{value='5a30c7251c554e6e93411bd1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:91, serverValue:120864}] to 10.2.1.123:3030
+2017-12-13 14:22:29.780 [cluster-ClusterId{value='5a30c7251c554e6e93411bd1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1101353}
+2017-12-13 14:22:29.789 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:92, serverValue:120865}] to 10.2.1.123:3030
+2017-12-13 14:22:29.793 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:92, serverValue:120865}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.794 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.795 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.802 [cluster-ClusterId{value='5a30c7251c554e6e93411bd2', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:93, serverValue:120866}] to 10.2.1.123:3030
+2017-12-13 14:22:29.803 [cluster-ClusterId{value='5a30c7251c554e6e93411bd2', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1412638}
+2017-12-13 14:22:29.809 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:94, serverValue:120867}] to 10.2.1.123:3030
+2017-12-13 14:22:29.815 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:94, serverValue:120867}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.816 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.818 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.824 [cluster-ClusterId{value='5a30c7251c554e6e93411bd3', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:95, serverValue:120868}] to 10.2.1.123:3030
+2017-12-13 14:22:29.825 [cluster-ClusterId{value='5a30c7251c554e6e93411bd3', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1091973}
+2017-12-13 14:22:29.831 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:96, serverValue:120869}] to 10.2.1.123:3030
+2017-12-13 14:22:29.836 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:96, serverValue:120869}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.837 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.839 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.848 [cluster-ClusterId{value='5a30c7251c554e6e93411bd4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:97, serverValue:120870}] to 10.2.1.123:3030
+2017-12-13 14:22:29.849 [cluster-ClusterId{value='5a30c7251c554e6e93411bd4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1121379}
+2017-12-13 14:22:29.854 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:98, serverValue:120871}] to 10.2.1.123:3030
+2017-12-13 14:22:29.859 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:98, serverValue:120871}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.860 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.862 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.869 [cluster-ClusterId{value='5a30c7251c554e6e93411bd5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:99, serverValue:120872}] to 10.2.1.123:3030
+2017-12-13 14:22:29.870 [cluster-ClusterId{value='5a30c7251c554e6e93411bd5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=941355}
+2017-12-13 14:22:29.875 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:100, serverValue:120873}] to 10.2.1.123:3030
+2017-12-13 14:22:29.880 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:100, serverValue:120873}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:29.881 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:29.883 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:29.889 [cluster-ClusterId{value='5a30c7251c554e6e93411bd6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:101, serverValue:120874}] to 10.2.1.123:3030
+2017-12-13 14:22:29.891 [cluster-ClusterId{value='5a30c7251c554e6e93411bd6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=983374}
+2017-12-13 14:22:29.897 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:102, serverValue:120875}] to 10.2.1.123:3030
+2017-12-13 14:22:29.901 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:102, serverValue:120875}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:43.968 [http-nio-8090-exec-2] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:43.969 [http-nio-8090-exec-2] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:43.995 [cluster-ClusterId{value='5a30c7331c554e6e93411bd7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:103, serverValue:120882}] to 10.2.1.123:3030
+2017-12-13 14:22:43.997 [cluster-ClusterId{value='5a30c7331c554e6e93411bd7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1298093}
+2017-12-13 14:22:44.007 [http-nio-8090-exec-2] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:104, serverValue:120883}] to 10.2.1.123:3030
+2017-12-13 14:22:44.023 [http-nio-8090-exec-2] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:104, serverValue:120883}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:44.025 [http-nio-8090-exec-2] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:44.028 [http-nio-8090-exec-2] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:44.064 [cluster-ClusterId{value='5a30c7341c554e6e93411bd9', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:105, serverValue:120884}] to 10.2.1.123:3030
+2017-12-13 14:22:44.071 [cluster-ClusterId{value='5a30c7341c554e6e93411bd9', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=6485563}
+2017-12-13 14:22:44.079 [http-nio-8090-exec-2] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:106, serverValue:120885}] to 10.2.1.123:3030
+2017-12-13 14:22:44.085 [http-nio-8090-exec-2] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:106, serverValue:120885}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:54.590 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:54.593 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:54.599 [cluster-ClusterId{value='5a30c73e1c554e6e93411bdb', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:107, serverValue:120886}] to 10.2.1.123:3030
+2017-12-13 14:22:54.600 [cluster-ClusterId{value='5a30c73e1c554e6e93411bdb', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1661908}
+2017-12-13 14:22:54.613 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:108, serverValue:120887}] to 10.2.1.123:3030
+2017-12-13 14:22:54.617 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:108, serverValue:120887}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:54.618 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:54.619 [http-nio-8090-exec-7] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:54.624 [cluster-ClusterId{value='5a30c73e1c554e6e93411bdd', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:109, serverValue:120888}] to 10.2.1.123:3030
+2017-12-13 14:22:54.625 [cluster-ClusterId{value='5a30c73e1c554e6e93411bdd', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=820909}
+2017-12-13 14:22:54.631 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:110, serverValue:120889}] to 10.2.1.123:3030
+2017-12-13 14:22:54.636 [http-nio-8090-exec-7] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:110, serverValue:120889}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:58.566 [http-nio-8090-exec-6] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:58.568 [http-nio-8090-exec-6] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:58.574 [cluster-ClusterId{value='5a30c7421c554e6e93411bdf', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:111, serverValue:120890}] to 10.2.1.123:3030
+2017-12-13 14:22:58.575 [cluster-ClusterId{value='5a30c7421c554e6e93411bdf', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=897371}
+2017-12-13 14:22:58.580 [http-nio-8090-exec-6] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:112, serverValue:120891}] to 10.2.1.123:3030
+2017-12-13 14:22:58.583 [http-nio-8090-exec-6] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:112, serverValue:120891}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:22:58.584 [http-nio-8090-exec-6] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:22:58.585 [http-nio-8090-exec-6] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:22:58.590 [cluster-ClusterId{value='5a30c7421c554e6e93411be1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:113, serverValue:120892}] to 10.2.1.123:3030
+2017-12-13 14:22:58.593 [cluster-ClusterId{value='5a30c7421c554e6e93411be1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2606947}
+2017-12-13 14:22:58.601 [http-nio-8090-exec-6] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:114, serverValue:120893}] to 10.2.1.123:3030
+2017-12-13 14:22:58.605 [http-nio-8090-exec-6] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:114, serverValue:120893}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.778 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.786 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.791 [cluster-ClusterId{value='5a30c7451c554e6e93411be4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:115, serverValue:120894}] to 10.2.1.123:3030
+2017-12-13 14:23:01.792 [cluster-ClusterId{value='5a30c7451c554e6e93411be4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1012039}
+2017-12-13 14:23:01.800 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:116, serverValue:120895}] to 10.2.1.123:3030
+2017-12-13 14:23:01.806 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:116, serverValue:120895}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.807 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.808 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.815 [cluster-ClusterId{value='5a30c7451c554e6e93411be5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:117, serverValue:120896}] to 10.2.1.123:3030
+2017-12-13 14:23:01.816 [cluster-ClusterId{value='5a30c7451c554e6e93411be5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=934200}
+2017-12-13 14:23:01.821 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:118, serverValue:120897}] to 10.2.1.123:3030
+2017-12-13 14:23:01.826 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:118, serverValue:120897}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.827 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.828 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.833 [cluster-ClusterId{value='5a30c7451c554e6e93411be6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:119, serverValue:120898}] to 10.2.1.123:3030
+2017-12-13 14:23:01.835 [cluster-ClusterId{value='5a30c7451c554e6e93411be6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=893666}
+2017-12-13 14:23:01.841 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:120, serverValue:120899}] to 10.2.1.123:3030
+2017-12-13 14:23:01.851 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:120, serverValue:120899}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.852 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.853 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.857 [cluster-ClusterId{value='5a30c7451c554e6e93411be7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:121, serverValue:120900}] to 10.2.1.123:3030
+2017-12-13 14:23:01.859 [cluster-ClusterId{value='5a30c7451c554e6e93411be7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1382401}
+2017-12-13 14:23:01.864 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:122, serverValue:120901}] to 10.2.1.123:3030
+2017-12-13 14:23:01.868 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:122, serverValue:120901}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.868 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.871 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.876 [cluster-ClusterId{value='5a30c7451c554e6e93411be8', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:123, serverValue:120902}] to 10.2.1.123:3030
+2017-12-13 14:23:01.877 [cluster-ClusterId{value='5a30c7451c554e6e93411be8', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=892904}
+2017-12-13 14:23:01.884 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:124, serverValue:120903}] to 10.2.1.123:3030
+2017-12-13 14:23:01.891 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:124, serverValue:120903}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.892 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.893 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.898 [cluster-ClusterId{value='5a30c7451c554e6e93411be9', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:125, serverValue:120904}] to 10.2.1.123:3030
+2017-12-13 14:23:01.899 [cluster-ClusterId{value='5a30c7451c554e6e93411be9', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1027332}
+2017-12-13 14:23:01.904 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:126, serverValue:120905}] to 10.2.1.123:3030
+2017-12-13 14:23:01.908 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:126, serverValue:120905}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.909 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.910 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.915 [cluster-ClusterId{value='5a30c7451c554e6e93411bea', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:127, serverValue:120906}] to 10.2.1.123:3030
+2017-12-13 14:23:01.916 [cluster-ClusterId{value='5a30c7451c554e6e93411bea', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=938775}
+2017-12-13 14:23:01.922 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:128, serverValue:120907}] to 10.2.1.123:3030
+2017-12-13 14:23:01.926 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:128, serverValue:120907}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.926 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.927 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.932 [cluster-ClusterId{value='5a30c7451c554e6e93411beb', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:129, serverValue:120908}] to 10.2.1.123:3030
+2017-12-13 14:23:01.934 [cluster-ClusterId{value='5a30c7451c554e6e93411beb', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=942378}
+2017-12-13 14:23:01.939 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:130, serverValue:120909}] to 10.2.1.123:3030
+2017-12-13 14:23:01.943 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:130, serverValue:120909}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.944 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.945 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.951 [cluster-ClusterId{value='5a30c7451c554e6e93411bec', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:131, serverValue:120910}] to 10.2.1.123:3030
+2017-12-13 14:23:01.952 [cluster-ClusterId{value='5a30c7451c554e6e93411bec', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=876122}
+2017-12-13 14:23:01.957 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:132, serverValue:120911}] to 10.2.1.123:3030
+2017-12-13 14:23:01.961 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:132, serverValue:120911}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.962 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.962 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.967 [cluster-ClusterId{value='5a30c7451c554e6e93411bed', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:133, serverValue:120912}] to 10.2.1.123:3030
+2017-12-13 14:23:01.968 [cluster-ClusterId{value='5a30c7451c554e6e93411bed', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1006502}
+2017-12-13 14:23:01.974 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:134, serverValue:120913}] to 10.2.1.123:3030
+2017-12-13 14:23:01.989 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:134, serverValue:120913}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:01.990 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:01.992 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:01.998 [cluster-ClusterId{value='5a30c7451c554e6e93411bee', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:135, serverValue:120914}] to 10.2.1.123:3030
+2017-12-13 14:23:02.000 [cluster-ClusterId{value='5a30c7451c554e6e93411bee', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1912593}
+2017-12-13 14:23:02.006 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:136, serverValue:120915}] to 10.2.1.123:3030
+2017-12-13 14:23:02.010 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:136, serverValue:120915}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:02.011 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:02.013 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:02.017 [cluster-ClusterId{value='5a30c7461c554e6e93411bef', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:137, serverValue:120916}] to 10.2.1.123:3030
+2017-12-13 14:23:02.018 [cluster-ClusterId{value='5a30c7461c554e6e93411bef', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=939102}
+2017-12-13 14:23:02.024 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:138, serverValue:120917}] to 10.2.1.123:3030
+2017-12-13 14:23:02.027 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:138, serverValue:120917}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:02.028 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:02.029 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:02.033 [cluster-ClusterId{value='5a30c7461c554e6e93411bf0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:139, serverValue:120918}] to 10.2.1.123:3030
+2017-12-13 14:23:02.034 [cluster-ClusterId{value='5a30c7461c554e6e93411bf0', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=688687}
+2017-12-13 14:23:02.038 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:140, serverValue:120919}] to 10.2.1.123:3030
+2017-12-13 14:23:02.041 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:140, serverValue:120919}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:02.042 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:02.043 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:02.047 [cluster-ClusterId{value='5a30c7461c554e6e93411bf1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:141, serverValue:120920}] to 10.2.1.123:3030
+2017-12-13 14:23:02.048 [cluster-ClusterId{value='5a30c7461c554e6e93411bf1', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=846256}
+2017-12-13 14:23:02.056 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:142, serverValue:120921}] to 10.2.1.123:3030
+2017-12-13 14:23:02.060 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:142, serverValue:120921}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:02.061 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:02.062 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:02.066 [cluster-ClusterId{value='5a30c7461c554e6e93411bf2', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:143, serverValue:120922}] to 10.2.1.123:3030
+2017-12-13 14:23:02.067 [cluster-ClusterId{value='5a30c7461c554e6e93411bf2', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1052932}
+2017-12-13 14:23:02.072 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:144, serverValue:120923}] to 10.2.1.123:3030
+2017-12-13 14:23:02.077 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:144, serverValue:120923}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:02.078 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:02.079 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:02.094 [cluster-ClusterId{value='5a30c7461c554e6e93411bf3', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:145, serverValue:120924}] to 10.2.1.123:3030
+2017-12-13 14:23:02.096 [cluster-ClusterId{value='5a30c7461c554e6e93411bf3', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1944056}
+2017-12-13 14:23:02.101 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:146, serverValue:120925}] to 10.2.1.123:3030
+2017-12-13 14:23:02.105 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:146, serverValue:120925}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:02.106 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:02.107 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:02.111 [cluster-ClusterId{value='5a30c7461c554e6e93411bf4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:147, serverValue:120926}] to 10.2.1.123:3030
+2017-12-13 14:23:02.112 [cluster-ClusterId{value='5a30c7461c554e6e93411bf4', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=796553}
+2017-12-13 14:23:02.117 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:148, serverValue:120927}] to 10.2.1.123:3030
+2017-12-13 14:23:02.121 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:148, serverValue:120927}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:02.123 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:02.124 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:02.128 [cluster-ClusterId{value='5a30c7461c554e6e93411bf5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:149, serverValue:120928}] to 10.2.1.123:3030
+2017-12-13 14:23:02.130 [cluster-ClusterId{value='5a30c7461c554e6e93411bf5', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=927375}
+2017-12-13 14:23:02.136 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:150, serverValue:120929}] to 10.2.1.123:3030
+2017-12-13 14:23:02.140 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:150, serverValue:120929}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:02.142 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:02.143 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:02.150 [cluster-ClusterId{value='5a30c7461c554e6e93411bf6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:151, serverValue:120930}] to 10.2.1.123:3030
+2017-12-13 14:23:02.151 [cluster-ClusterId{value='5a30c7461c554e6e93411bf6', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=974557}
+2017-12-13 14:23:02.156 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:152, serverValue:120931}] to 10.2.1.123:3030
+2017-12-13 14:23:02.161 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:152, serverValue:120931}] to 10.2.1.123:3030 because the pool has been closed.
+2017-12-13 14:23:02.162 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[10.2.1.123:3030], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=50}
+2017-12-13 14:23:02.163 [http-nio-8090-exec-4] INFO  org.mongodb.driver.cluster -
+				No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=10.2.1.123:3030, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2017-12-13 14:23:02.168 [cluster-ClusterId{value='5a30c7461c554e6e93411bf7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:153, serverValue:120932}] to 10.2.1.123:3030
+2017-12-13 14:23:02.169 [cluster-ClusterId{value='5a30c7461c554e6e93411bf7', description='null'}-10.2.1.123:3030] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=10.2.1.123:3030, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=800031}
+2017-12-13 14:23:02.175 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:154, serverValue:120933}] to 10.2.1.123:3030
+2017-12-13 14:23:02.179 [http-nio-8090-exec-4] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:154, serverValue:120933}] to 10.2.1.123:3030 because the pool has been closed.

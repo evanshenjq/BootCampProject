@@ -1,0 +1,97 @@
+#course-intro{
+    font-size: 22px;
+    color:dimgray;        
+}
+#course-price{
+    color:#f63;
+    font-size: 32px;
+}
+#price-dollar{
+    font-size: 20px;
+    background: #e3e3e3;
+    background: -moz-linear-gradient(top, #e3e3e3, #f6f6f6);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3));
+    padding: 10px 20px;
+    margin-left: -20px;
+    margin-top: 20px;
+    position: relative;
+    width: 111%;
+   -moz-box-shadow: 1px 1px 3px #c8c8c8;
+   -webkit-box-shadow: 1px 1px 3px #c8c8c8;
+   box-shadow: 1px 1px 3px #c8c8c8;
+   color: #454545;
+   text-shadow: 0 1px 0 white;
+   height:75px;
+}
+
+.arrow {
+    width: 0; height: 0;
+    line-height: 0;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #c8c8c8;
+    top: 104%;
+    right: 0;
+    position: absolute;
+}
+#course-head{
+    columns: #000000;
+}
+#course-image{
+    text-align: center;
+}
+.img-thumbnail{
+    width:488px;
+    height:358px;
+}
+#resr-btn{
+    margin-top: 35px;
+}
+.container hr{
+    border:none;
+    border-top:4px solid #5ca94d;
+    margin-top: 5px;
+}
+.infoTitle {
+    margin: 10px 20px;
+    border-bottom: 3px solid #ececec;
+    height: 36px;
+    line-height: 33px;
+    font-size: 23px;
+    font-weight: 700;
+    color: #5ca94d;
+  }
+  .infoTitle span {
+    display: inline-block;
+    padding: 0 3px;
+    border-bottom: 3px solid #5ca94d;
+  }
+  .boxAfterTitle p{
+      margin:15px 5px;
+      border-bottom: 1px dashed #eaeaea;
+      line-height: -15px;
+      font-size: 17px;
+      color:#999;
+  }
+  .boxAfterTitle span{
+      padding-left: 8px;
+      color:black;
+      font-size: 14px;
+  }
+
+  .boxAfterIntr span{
+    color:black;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  #course-type{
+      color:#999;
+      
+  }
+  #course-type span{
+    color:#666;
+    padding-left: 6px;
+}
+  #comp-name{
+      font-size: 30px;
+  }

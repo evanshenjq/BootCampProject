@@ -1,0 +1,65 @@
+  /* chrome */
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+  }
+  
+  
+  /* Firefox */
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  #logoPreview {
+    margin: 10px;
+    width: 100px;
+  }
+  
+  #pictures {
+    width: 80%;
+  }
+  
+  .glyphicon glyphicon-remove {
+    width: 25px;
+    height: 25px;
+    color: black;
+  }
+  
+  #option {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    clear: both;
+  }
+  
+  #couNameInput p {
+    color: #f00;
+  }
+  
+  #cTime p {
+    color: #f00;
+  }
+  
+  .delTime {
+    width: 20px;
+    height: 20px;
+  }
+  
+  #intP {
+    width: 60px;
+  }
+  
+  #decP {
+    width: 30px;
+  }
+  
+  #pictures img {
+    width: 100px;
+    margin: 10px;
+    float: left;
+  }
+  
+  .breadcrumb h4{
+      text-align:center;
+  }
